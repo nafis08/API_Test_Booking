@@ -3,7 +3,7 @@
 This project is an automated API testing framework for a booking system using **Java**, **RestAssured**, **TestNG**, and **Maven**. It includes CI support via **GitHub Actions**.
 
 ## Project Structure
-
+```
 API_Test_Booking-main/
 ├── .github/workflows/ # CI/CD pipeline configurations
 ├── src/ # Source code for test cases and utilities
@@ -11,7 +11,7 @@ API_Test_Booking-main/
 ├── pom.xml # Maven configuration file
 ├── .classpath, .project # Eclipse project files
 ├── .settings/ # Eclipse-specific settings
-
+```
 
 ## Technologies Used
 
