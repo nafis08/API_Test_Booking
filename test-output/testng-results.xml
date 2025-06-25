@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="32" passed="26" failed="6" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-25T23:30:25 CEST" name="Suite" finished-at="2025-06-25T23:30:46 CEST" duration-ms="21008">
+    <groups>
+    </groups>
+    <test started-at="2025-06-25T23:30:25 CEST" name="Test" finished-at="2025-06-25T23:30:46 CEST" duration-ms="21008">
+      <class name="NegativeTests.NegativeTestsForGetBookingId">
+        <test-method signature="getBookingIds_InvalidCheckinFormat_ShouldReturnEmptyList()[pri:0, instance:NegativeTests.NegativeTestsForGetBookingId@6adbc9d]" started-at="2025-06-25T23:30:36 CEST" name="getBookingIds_InvalidCheckinFormat_ShouldReturnEmptyList" finished-at="2025-06-25T23:30:36 CEST" duration-ms="572" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected empty list for invalid date format. expected [0] but found [4]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected empty list for invalid date format. expected [0] but found [4]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at NegativeTests.NegativeTestsForGetBookingId.getBookingIds_InvalidCheckinFormat_ShouldReturnEmptyList(NegativeTestsForGetBookingId.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingIds_InvalidCheckinFormat_ShouldReturnEmptyList -->
+      </class> <!-- NegativeTests.NegativeTestsForGetBookingId -->
+      <class name="PartialUpdateBooking">
+        <test-method signature="partialUpdateBooking()[pri:0, instance:PartialUpdateBooking@7f0eb4b4]" started-at="2025-06-25T23:30:44 CEST" name="partialUpdateBooking" finished-at="2025-06-25T23:30:45 CEST" depends-on-methods="GetToken.createToken, CreateBooking.createBooking" duration-ms="575" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <405>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <405>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at PartialUpdateBooking.partialUpdateBooking(PartialUpdateBooking.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- partialUpdateBooking -->
+      </class> <!-- PartialUpdateBooking -->
+      <class name="NegativeTests.NegativeTestForBookingCreation">
+        <test-method signature="createBooking_EmptyBody_ShouldFail()[pri:0, instance:NegativeTests.NegativeTestForBookingCreation@4ec4f3a0]" started-at="2025-06-25T23:30:37 CEST" name="createBooking_EmptyBody_ShouldFail" finished-at="2025-06-25T23:30:37 CEST" duration-ms="561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking_EmptyBody_ShouldFail -->
+        <test-method signature="createBooking_InvalidJsonFormat_ShouldFail()[pri:0, instance:NegativeTests.NegativeTestForBookingCreation@4ec4f3a0]" started-at="2025-06-25T23:30:37 CEST" name="createBooking_InvalidJsonFormat_ShouldFail" finished-at="2025-06-25T23:30:38 CEST" duration-ms="561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking_InvalidJsonFormat_ShouldFail -->
+        <test-method signature="createBooking_InvalidPriceType_ShouldFail()[pri:0, instance:NegativeTests.NegativeTestForBookingCreation@4ec4f3a0]" started-at="2025-06-25T23:30:38 CEST" name="createBooking_InvalidPriceType_ShouldFail" finished-at="2025-06-25T23:30:38 CEST" duration-ms="563" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected failure due to invalid data type. Got: 200 expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected failure due to invalid data type. Got: 200 expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at NegativeTests.NegativeTestForBookingCreation.createBooking_InvalidPriceType_ShouldFail(NegativeTestForBookingCreation.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking_InvalidPriceType_ShouldFail -->
+        <test-method signature="createBooking_MissingFirstName_ShouldFail()[pri:0, instance:NegativeTests.NegativeTestForBookingCreation@4ec4f3a0]" started-at="2025-06-25T23:30:38 CEST" name="createBooking_MissingFirstName_ShouldFail" finished-at="2025-06-25T23:30:39 CEST" duration-ms="562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking_MissingFirstName_ShouldFail -->
+      </class> <!-- NegativeTests.NegativeTestForBookingCreation -->
+      <class name="DeleteBooking">
+        <test-method signature="deleteBooking()[pri:0, instance:DeleteBooking@5c33f1a9]" started-at="2025-06-25T23:30:45 CEST" name="deleteBooking" finished-at="2025-06-25T23:30:45 CEST" depends-on-methods="GetToken.createToken, CreateBooking.createBooking" duration-ms="568" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code (is <200> or is <201>) but was <405>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code (is <200> or is <201>) but was <405>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:84)
+at DeleteBooking.deleteBooking(DeleteBooking.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking -->
+      </class> <!-- DeleteBooking -->
+      <class name="SecurityTests.SecurityTestForGetBookingDetails">
+        <test-method signature="getBooking_XSSInjection_ShouldFail()[pri:0, instance:SecurityTests.SecurityTestForGetBookingDetails@6069db50]" started-at="2025-06-25T23:30:45 CEST" name="getBooking_XSSInjection_ShouldFail" finished-at="2025-06-25T23:30:46 CEST" duration-ms="560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBooking_XSSInjection_ShouldFail -->
+      </class> <!-- SecurityTests.SecurityTestForGetBookingDetails -->
+      <class name="SecurityTests.SecurityTestsForGetToken">
+        <test-method signature="createToken_SQLInjectionAttempt_ShouldFail()[pri:0, instance:SecurityTests.SecurityTestsForGetToken@49139829]" started-at="2025-06-25T23:30:42 CEST" name="createToken_SQLInjectionAttempt_ShouldFail" finished-at="2025-06-25T23:30:42 CEST" duration-ms="569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken_SQLInjectionAttempt_ShouldFail -->
+        <test-method signature="createToken_WithoutContentTypeHeader_ShouldFailGracefully()[pri:0, instance:SecurityTests.SecurityTestsForGetToken@49139829]" started-at="2025-06-25T23:30:42 CEST" name="createToken_WithoutContentTypeHeader_ShouldFailGracefully" finished-at="2025-06-25T23:30:43 CEST" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken_WithoutContentTypeHeader_ShouldFailGracefully -->
+        <test-method signature="createToken_XSSInjection_ShouldBeHandled()[pri:0, instance:SecurityTests.SecurityTestsForGetToken@49139829]" started-at="2025-06-25T23:30:43 CEST" name="createToken_XSSInjection_ShouldBeHandled" finished-at="2025-06-25T23:30:44 CEST" duration-ms="562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken_XSSInjection_ShouldBeHandled -->
+      </class> <!-- SecurityTests.SecurityTestsForGetToken -->
+      <class name="GetBookingIDList">
+        <test-method signature="getBookingIDs()[pri:0, instance:GetBookingIDList@2b662a77]" started-at="2025-06-25T23:30:34 CEST" name="getBookingIDs" finished-at="2025-06-25T23:30:34 CEST" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingIDs -->
+      </class> <!-- GetBookingIDList -->
+      <class name="NegativeTests.NegativeTestsForDeleteBooking">
+        <test-method signature="deleteBooking_InvalidId_ShouldReturn404()[pri:0, instance:NegativeTests.NegativeTestsForDeleteBooking@7f3b84b8]" started-at="2025-06-25T23:30:28 CEST" name="deleteBooking_InvalidId_ShouldReturn404" finished-at="2025-06-25T23:30:30 CEST" duration-ms="1322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking_InvalidId_ShouldReturn404 -->
+        <test-method signature="deleteBooking_WithoutToken_ShouldFail()[pri:0, instance:NegativeTests.NegativeTestsForDeleteBooking@7f3b84b8]" started-at="2025-06-25T23:30:30 CEST" name="deleteBooking_WithoutToken_ShouldFail" finished-at="2025-06-25T23:30:30 CEST" duration-ms="570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking_WithoutToken_ShouldFail -->
+        <test-method signature="deleteBooking_Twice_ShouldFailSecondTime()[pri:0, instance:NegativeTests.NegativeTestsForDeleteBooking@7f3b84b8]" started-at="2025-06-25T23:30:41 CEST" name="deleteBooking_Twice_ShouldFailSecondTime" finished-at="2025-06-25T23:30:42 CEST" depends-on-methods="CreateBooking.createBooking" duration-ms="1133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking_Twice_ShouldFailSecondTime -->
+      </class> <!-- NegativeTests.NegativeTestsForDeleteBooking -->
+      <class name="NegativeTests.NegativeTestsForCreateToken">
+        <test-method signature="createToken_InvalidPassword_ShouldFail()[pri:0, instance:NegativeTests.NegativeTestsForCreateToken@8f4ea7c]" started-at="2025-06-25T23:30:25 CEST" name="createToken_InvalidPassword_ShouldFail" finished-at="2025-06-25T23:30:27 CEST" duration-ms="1637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken_InvalidPassword_ShouldFail -->
+        <test-method signature="createToken_InvalidUsername_ShouldReturn403()[pri:0, instance:NegativeTests.NegativeTestsForCreateToken@8f4ea7c]" started-at="2025-06-25T23:30:27 CEST" name="createToken_InvalidUsername_ShouldReturn403" finished-at="2025-06-25T23:30:28 CEST" duration-ms="589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken_InvalidUsername_ShouldReturn403 -->
+        <test-method signature="createToken_MissingPassword_ShouldReturnError()[pri:0, instance:NegativeTests.NegativeTestsForCreateToken@8f4ea7c]" started-at="2025-06-25T23:30:28 CEST" name="createToken_MissingPassword_ShouldReturnError" finished-at="2025-06-25T23:30:28 CEST" duration-ms="565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken_MissingPassword_ShouldReturnError -->
+      </class> <!-- NegativeTests.NegativeTestsForCreateToken -->
+      <class name="GetToken">
+        <test-method signature="createToken()[pri:0, instance:GetToken@9597028]" started-at="2025-06-25T23:30:44 CEST" name="createToken" finished-at="2025-06-25T23:30:44 CEST" duration-ms="559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createToken -->
+      </class> <!-- GetToken -->
+      <class name="SecurityTests.SecurityTestForDeleteBooking">
+        <test-method signature="deleteBooking_InvalidToken_ShouldBeForbidden()[pri:0, instance:SecurityTests.SecurityTestForDeleteBooking@1b7cc17c]" started-at="2025-06-25T23:30:33 CEST" name="deleteBooking_InvalidToken_ShouldBeForbidden" finished-at="2025-06-25T23:30:33 CEST" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking_InvalidToken_ShouldBeForbidden -->
+        <test-method signature="deleteBooking_XSSAttempt_ShouldNotSucceed()[pri:0, instance:SecurityTests.SecurityTestForDeleteBooking@1b7cc17c]" started-at="2025-06-25T23:30:33 CEST" name="deleteBooking_XSSAttempt_ShouldNotSucceed" finished-at="2025-06-25T23:30:34 CEST" duration-ms="562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking_XSSAttempt_ShouldNotSucceed -->
+      </class> <!-- SecurityTests.SecurityTestForDeleteBooking -->
+      <class name="SecurityTests.SecurityTestsForBookingCreation">
+        <test-method signature="createBooking_SQLInjectionAttempt_ShouldBeHandledSafely()[pri:0, instance:SecurityTests.SecurityTestsForBookingCreation@57a3af25]" started-at="2025-06-25T23:30:30 CEST" name="createBooking_SQLInjectionAttempt_ShouldBeHandledSafely" finished-at="2025-06-25T23:30:31 CEST" duration-ms="562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking_SQLInjectionAttempt_ShouldBeHandledSafely -->
+        <test-method signature="createBooking_XSSAttempt_ShouldNotExecuteScript()[pri:0, instance:SecurityTests.SecurityTestsForBookingCreation@57a3af25]" started-at="2025-06-25T23:30:31 CEST" name="createBooking_XSSAttempt_ShouldNotExecuteScript" finished-at="2025-06-25T23:30:32 CEST" duration-ms="890" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Wrong type of JSON expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Wrong type of JSON expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at SecurityTests.SecurityTestsForBookingCreation.createBooking_XSSAttempt_ShouldNotExecuteScript(SecurityTestsForBookingCreation.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking_XSSAttempt_ShouldNotExecuteScript -->
+      </class> <!-- SecurityTests.SecurityTestsForBookingCreation -->
+      <class name="CreateBooking">
+        <test-method signature="createBooking(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:CreateBooking@223191a6]" started-at="2025-06-25T23:30:39 CEST" name="createBooking" data-provider="BookingData" finished-at="2025-06-25T23:30:40 CEST" duration-ms="576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Francis]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Xxevier]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rice]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+        <test-method signature="createBooking(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:CreateBooking@223191a6]" started-at="2025-06-25T23:30:40 CEST" name="createBooking" data-provider="BookingData" finished-at="2025-06-25T23:30:40 CEST" duration-ms="584" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rick]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sorken]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Noodle]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+        <test-method signature="createBooking(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:CreateBooking@223191a6]" started-at="2025-06-25T23:30:40 CEST" name="createBooking" data-provider="BookingData" finished-at="2025-06-25T23:30:41 CEST" duration-ms="568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Danny]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Raegan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Car]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+      </class> <!-- CreateBooking -->
+      <class name="GetBookingDetails">
+        <test-method signature="getBookingDetails()[pri:0, instance:GetBookingDetails@4550bb58]" started-at="2025-06-25T23:30:36 CEST" name="getBookingDetails" finished-at="2025-06-25T23:30:37 CEST" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookingDetails -->
+      </class> <!-- GetBookingDetails -->
+      <class name="NegativeTests.NegativeTestForGetBookingDetails">
+        <test-method signature="getBooking_InvalidIdFormat_ShouldReturn404()[pri:0, instance:NegativeTests.NegativeTestForGetBookingDetails@c8c12ac]" started-at="2025-06-25T23:30:34 CEST" name="getBooking_InvalidIdFormat_ShouldReturn404" finished-at="2025-06-25T23:30:35 CEST" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBooking_InvalidIdFormat_ShouldReturn404 -->
+        <test-method signature="getBooking_NonExistingId_ShouldReturn404()[pri:0, instance:NegativeTests.NegativeTestForGetBookingDetails@c8c12ac]" started-at="2025-06-25T23:30:35 CEST" name="getBooking_NonExistingId_ShouldReturn404" finished-at="2025-06-25T23:30:36 CEST" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBooking_NonExistingId_ShouldReturn404 -->
+      </class> <!-- NegativeTests.NegativeTestForGetBookingDetails -->
+      <class name="UpdateBooking">
+        <test-method signature="updateAllBookings()[pri:0, instance:UpdateBooking@4efbca5a]" started-at="2025-06-25T23:30:46 CEST" name="updateAllBookings" finished-at="2025-06-25T23:30:46 CEST" depends-on-methods="GetToken.createToken, CreateBooking.createBooking" duration-ms="568" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <405>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <405>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at UpdateBooking.updateAllBookings(UpdateBooking.java:41)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateAllBookings -->
+      </class> <!-- UpdateBooking -->
+      <class name="NegativeTests.NegativeTestsForUpdateBooking">
+        <test-method signature="partialUpdateWithInvalidJson()[pri:0, instance:NegativeTests.NegativeTestsForUpdateBooking@1623b78d]" started-at="2025-06-25T23:30:32 CEST" name="partialUpdateWithInvalidJson" finished-at="2025-06-25T23:30:32 CEST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- partialUpdateWithInvalidJson -->
+        <test-method signature="partialUpdateWithoutToken()[pri:0, instance:NegativeTests.NegativeTestsForUpdateBooking@1623b78d]" started-at="2025-06-25T23:30:32 CEST" name="partialUpdateWithoutToken" finished-at="2025-06-25T23:30:33 CEST" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- partialUpdateWithoutToken -->
+      </class> <!-- NegativeTests.NegativeTestsForUpdateBooking -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
