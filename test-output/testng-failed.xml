@@ -3,46 +3,31 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="CreateBooking">
+      <class name="test.java.NegativeTestsForDeleteBooking">
         <methods>
-          <include name="createBooking"/>
+          <include name="deleteBooking_Twice_ShouldFailSecondTime"/>
         </methods>
-      </class> <!-- CreateBooking -->
-      <class name="NegativeTests.NegativeTestsForGetBookingId">
-        <methods>
-          <include name="getBookingIds_InvalidCheckinFormat_ShouldReturnEmptyList"/>
-        </methods>
-      </class> <!-- NegativeTests.NegativeTestsForGetBookingId -->
-      <class name="PartialUpdateBooking">
-        <methods>
-          <include name="partialUpdateBooking"/>
-        </methods>
-      </class> <!-- PartialUpdateBooking -->
-      <class name="GetToken">
-        <methods>
-          <include name="createToken"/>
-        </methods>
-      </class> <!-- GetToken -->
-      <class name="NegativeTests.NegativeTestForBookingCreation">
-        <methods>
-          <include name="createBooking_InvalidPriceType_ShouldFail"/>
-        </methods>
-      </class> <!-- NegativeTests.NegativeTestForBookingCreation -->
-      <class name="DeleteBooking">
-        <methods>
-          <include name="deleteBooking"/>
-        </methods>
-      </class> <!-- DeleteBooking -->
-      <class name="SecurityTests.SecurityTestsForBookingCreation">
+      </class> <!-- test.java.NegativeTestsForDeleteBooking -->
+      <class name="test.java.SecurityTestsForBookingCreation">
         <methods>
           <include name="createBooking_XSSAttempt_ShouldNotExecuteScript"/>
         </methods>
-      </class> <!-- SecurityTests.SecurityTestsForBookingCreation -->
-      <class name="UpdateBooking">
+      </class> <!-- test.java.SecurityTestsForBookingCreation -->
+      <class name="test.java.NegativeTestForBookingCreation">
         <methods>
-          <include name="updateAllBookings"/>
+          <include name="createBooking_InvalidPriceType_ShouldFail"/>
         </methods>
-      </class> <!-- UpdateBooking -->
+      </class> <!-- test.java.NegativeTestForBookingCreation -->
+      <class name="test.java.NegativeTestsForGetBookingId">
+        <methods>
+          <include name="getBookingIds_InvalidCheckinFormat_ShouldReturnEmptyList"/>
+        </methods>
+      </class> <!-- test.java.NegativeTestsForGetBookingId -->
+      <class name="test.java.CreateBooking">
+        <methods>
+          <include name="createBooking"/>
+        </methods>
+      </class> <!-- test.java.CreateBooking -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

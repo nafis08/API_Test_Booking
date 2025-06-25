@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="NegativeTests.NegativeTestsForCreateToken"/>
-      <class name="NegativeTests.NegativeTestsForDeleteBooking"/>
-      <class name="SecurityTests.SecurityTestsForBookingCreation"/>
-      <class name="GetBookingIDList"/>
-      <class name="PartialUpdateBooking"/>
-      <class name="DeleteBooking"/>
-      <class name="NegativeTests.NegativeTestsForUpdateBooking"/>
-      <class name="NegativeTests.NegativeTestForGetBookingDetails"/>
-      <class name="NegativeTests.NegativeTestsForGetBookingId"/>
-      <class name="GetBookingDetails"/>
-      <class name="NegativeTests.NegativeTestForBookingCreation"/>
-      <class name="CreateBooking"/>
-      <class name="SecurityTests.SecurityTestsForGetToken"/>
-      <class name="GetToken"/>
-      <class name="SecurityTests.SecurityTestForGetBookingDetails"/>
-      <class name="UpdateBooking"/>
-      <class name="SecurityTests.SecurityTestForDeleteBooking"/>
-    </classes>
-  </test> <!-- Test -->
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="test.java.GetToken" />
+			<class name="test.java.CreateBooking" />
+			<class name="test.java.UpdateBooking" />
+			<class name="test.java.PartialUpdateBooking" />
+			<class name="test.java.DeleteBooking" />
+			<class name="test.java.NegativeTestsForCreateToken" />
+			<class name="test.java.SecurityTestsForBookingCreation" />
+			<class name="test.java.SecurityTestsForGetToken" />
+			<class name="test.java.NegativeTestsForDeleteBooking" />
+			<class name="test.java.NegativeTestForBookingCreation" />
+			<class name="test.java.NegativeTestForGetBookingDetails" />
+			<class name="test.java.SecurityTestForGetBookingDetails" />
+			<class name="test.java.SecurityTestForDeleteBooking" />
+			<class name="test.java.GetBookingIDList" />
+			<class name="test.java.NegativeTestsForUpdateBooking" />
+			<class name="test.java.NegativeTestsForGetBookingId" />
+			<class name="test.java.GetBookingDetails" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
